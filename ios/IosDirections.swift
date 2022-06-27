@@ -3,11 +3,8 @@ import MapKit;
 
 public extension MKMultiPoint {
     var coordinates: [CLLocationCoordinate2D] {
-        var coords = [CLLocationCoordinate2D](repeating: kCLLocationCoordinate2DInvalid,
-                                              count: pointCount)
-
+        var coords = [CLLocationCoordinate2D](repeating: kCLLocationCoordinate2DInvalid, count: pointCount)
         getCoordinates(&coords, range: NSRange(location: 0, length: pointCount))
-
         return coords
     }
 }
@@ -33,20 +30,20 @@ class IosDirections: NSObject {
         directions.calculate { response, error in
             if error != nil {
                 reject("Error getting directions", error!.localizedDescription, nil);
-                return;
+                return
             }
 
             guard let unwrappedResponse = response else {
                 reject("Error getting directions", "Could not unwrap response", nil);
-                return;
+                return
             }
+
             if unwrappedResponse.routes.count > 0 {
                 let route = unwrappedResponse.routes[0]
-                
-                var points: [[Double]] = [];
 
+                var points: [[Double]] = []
                 for point in route.polyline.coordinates {
-                    points.append([point.latitude, point.longitude]);
+                    points.append([point.latitude, point.longitude])
                 }
 
                 let successDict: NSDictionary! = [
@@ -55,8 +52,9 @@ class IosDirections: NSObject {
                     "points": points
                 ]
 
-                resolve([successDict])
+                resolve(successDict)
             }
         }
     }
+
 }
