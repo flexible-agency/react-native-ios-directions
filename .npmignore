@@ -4,3 +4,4 @@ example
 .watchmanconfig
 tsconfig.js
 tsconfig.build.js
+.idea

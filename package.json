@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/flexible-agency/react-native-ios-directions#readme",
   "devDependencies": {
+    "@types/react-native": "^0.69.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react": "17.0.2",
