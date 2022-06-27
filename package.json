@@ -1,6 +1,6 @@
 {
   "name": "react-native-ios-directions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Exposing the native MKDirections API on iOS.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
