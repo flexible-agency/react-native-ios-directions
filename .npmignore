@@ -1,0 +1,6 @@
+example
+.gitattributes
+.gitignore
+.watchmanconfig
+tsconfig.js
+tsconfig.build.js

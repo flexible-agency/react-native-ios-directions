@@ -1,28 +1,21 @@
 # react-native-ios-directions
-Exposing the native MKDirections API on iOS.
+
+Exposing the native [MKDirections](https://developer.apple.com/documentation/mapkit/mkdirections) API on iOS.
+
+
 ## Installation
 
 ```sh
-npm install react-native-ios-directions```
+yarn add react-native-ios-directions
+```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-ios-directions";
+import { getDirections } from "react-native-ios-directions";
 
-// ...
-
-const result = await multiply(3, 7);
+const route = await getDirections([51.526023, -0.083454], [51.5336, -0.05711]);
+if (route) {
+    // route = { eta: 0, distance: 0, points: [[0,0],[1,1]] }
+}
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
