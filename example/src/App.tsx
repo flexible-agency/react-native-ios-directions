@@ -25,7 +25,7 @@ export default function App() {
         longitudeDelta: 0.0421,
       }}>
         <Polyline
-          coordinates={result[0].points?.map(([latitude, longitude]) => ({latitude, longitude}))}
+          coordinates={result.points.map(([latitude, longitude]) => ({latitude, longitude}))}
           strokeColor="#1871f9"
           strokeWidth={5}
         />
